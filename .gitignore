@@ -1,0 +1,8 @@
+# Data and Cache
+data/
+.cache/
+
+# IDE
+.idea/
+.vscode/
+.venv/
