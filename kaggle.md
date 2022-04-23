@@ -25,10 +25,21 @@ kaggle datasets init -p /path/to/dataset  # Create a folder containing the files
 kaggle datasets create -p /path/to/dataset  # create the dataset
 ```
 
-# Interacting with Notebooks
+Interacting with Notebooks
 
 ```shell
 kaggle kernels list -s [KEYWORD]
 kaggle kernels push -k [KERNEL] -p /path/to/kernel
 kaggle kernels pull [KERNEL] -p /path/to/download -m  # download code files and metadata associated with a Notebook
 ```
+
+## Links
+
+### 资源
+
+- [kaggle 官网](https://www.kaggle.com/)
+
+### 入门
+
+- [Kaggle入门，看这一篇就够了](https://zhuanlan.zhihu.com/p/80182734)
+- [参加 kaggle 竞赛是怎样一种体验？](https://www.zhihu.com/question/24533374)
