@@ -9,4 +9,13 @@
 del train["meter_reading"]
 # 回收整个 df
 del imputation_df
+
+# 大规模回收
+import gc
+del train, train_X, val_X, lgb_train, lgb_eval, train_y, val_y, target
+gc.collect()
 ```
+
+## Python 的类别
+
+object: 类别属性
