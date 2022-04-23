@@ -1,0 +1,16 @@
+# ------- IDE ------- #
+jupyter
+
+# --------- core ------ #
+lightgbm
+scikit-learn
+
+
+# -------- tools ------- #
+pandas
+tqdm
+
+# ------ plot --------- #
+matplotlib
+seaborn
+
