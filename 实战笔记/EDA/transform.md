@@ -52,6 +52,30 @@ for f in X_train.columns:
         X_test[f] = lbl.transform(list(X_test[f].values))  
 ```
 
+```python
+from sklearn.preprocessing import LabelEncoder
+
+for f in ['atom_index_0', 'atom_index_1', 'atom_1', 'type_0', 'type']:
+    if f in good_columns:
+        lbl = LabelEncoder()
+        lbl.fit(list(df_train[f].values) + list(df_test[f].values))
+        df_train[f] = lbl.transform(list(df_train[f].values))
+        df_test[f] = lbl.transform(list(df_test[f].values))
+```
+
+使用 pandas 的 get_dummies()
+
+```python
+def one_hot_encoder(df, nan_as_category = True):
+    """df 原位操作
+    """
+    original_columns = list(df.columns)  # Index -> List
+    categorical_columns = [col for col in df.columns if df[col].dtype == 'object']
+    df = pd.get_dummies(df, columns=categorical_columns, dummy_na=nan_as_category)
+    new_columns = [c for c in df.columns if c not in original_columns]
+    return df, new_columns
+```
+
 标签数值化
 
 ```python
