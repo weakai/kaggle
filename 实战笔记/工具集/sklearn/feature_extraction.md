@@ -40,3 +40,12 @@ print(tfidf_sample_ham)
 
 data_tfidf = tfidf_transformer.transform(bow_data)  # 也是 numpy 的稀疏矩阵
 ```
+
+## TfidfVectorizer
+
+直接将文本转化为 TfidfVectorizer
+
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+tfidf_transformer = TfidfVectorizer(analyzer = remove_punctuation_and_stopwords).fit(data['text'])
+```

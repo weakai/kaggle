@@ -1,4 +1,4 @@
-# Info
+# Log
 
 ```python
 import sys

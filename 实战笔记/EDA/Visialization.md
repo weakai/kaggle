@@ -3,7 +3,7 @@
 ## 数值描述
 
 ```python
-# 数: 打印数值数据的分位
+# 数值: 打印数值数据的分位
 # 类别: count, unique, top, freq
 melbourne_data_df.describe()
 
@@ -44,9 +44,16 @@ g1.set_title("Count of Different Molecule Types", fontsize=22)
 g1.set_xlabel("Molecular Type Name", fontsize=18)
 g1.set_ylabel("Scalar Coupling distribution", fontsize=18)
 
+# 调整子图
 plt.subplots_adjust(wspace=0.5, hspace=0.5, top=0.9)
 
 plt.show()
+```
+
+### boxenplot 箱线计数图
+
+```python
+g = sns.boxenplot(x='atom_index_0', y='scalar_coupling_constant', data=df_train, color='darkred' )
 ```
 
 ## 数值数据
@@ -74,6 +81,24 @@ sns.boxplot(x=train.item_price)
 plt.figure(figsize=(10, 4))
 plt.xlim(-100, 3000)
 sns.boxplot(x=train.item_cnt_day)
+```
+
+## 双变量的分布
+
+### 索引交叉
+
+```python
+cross_index = ['atom_index_0', 'atom_index_1']  # seting the desired 
+
+cm = sns.light_palette("green", as_cmap=True)
+pd.crosstab(df_train[cross_index[0]], df_train[cross_index[1]]).style.background_gradient(cmap = cm)
+```
+
+均值
+
+```python
+pd.crosstab(df_train[scalar_index_cross[0]], df_train[scalar_index_cross[1]], 
+            values=df_train['scalar_coupling_constant'], aggfunc=['mean']).style.background_gradient(cmap = cm)
 ```
 
 ## 自然语言

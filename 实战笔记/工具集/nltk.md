@@ -19,3 +19,27 @@ def remove_punctuation_and_stopwords(sms):
 # str2str 直接应用与 series
 data['text'].apply(remove_punctuation_and_stopwords)
 ```
+
+## 
+
+```python
+from nltk import word_tokenize, sent_tokenize
+from nltk.corpus import stopwords
+
+sent = 'I love apple and pineapple'
+
+print(sent)
+print(sent_tokenize(sent))
+print(word_tokenize(sent))
+
+stopWords = set(stopwords.words('english'))
+words = word_tokenize(sent)
+wordsFiltered = []
+
+for w in words:
+    if w not in stopWords:
+        # 去掉了停用词
+        wordsFiltered.append(w)
+
+print(wordsFiltered)
+```

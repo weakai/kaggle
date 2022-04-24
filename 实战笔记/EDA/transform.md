@@ -27,7 +27,6 @@ data_tfidf_train_sc = scaler.fit_transform(data_tfidf_train)
 data_tfidf_test_sc  = scaler.transform(data_tfidf_test)
 ```
 
-
 ## 编码
 
 字符串类型的 Label 编码
@@ -81,40 +80,8 @@ train["hour"] = train['hour'].astype(np.uint8)
 train['year_built'] = train['year_built'] - 1900  # 1914.0, 2001, 2014
 ```
 
-### 数据存储结构转化
-
-#### Series, DF -> numpy.ndarray
-
-```python
-X_train['card4'].values  # shape (n)
-np.array(data['length'])
-
-
-X_train[['card4']].values  # shape (n, 1)
-
-```
-
-#### Series -> list
-
-```python
-Series.tolist()
-# OR
-list(X_train['card4'].values)
-```
-
-
-
 ## Other
 
 ```python
 train['square_feet'] = np.log(train['square_feet'])
-```
-
-## 数据值截取
-
-离异值排除
-
-```python
-train = train[train.item_price < 100000]
-train = train[train.item_cnt_day < 1001]
 ```

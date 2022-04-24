@@ -1,6 +1,6 @@
 # IO
 
-## Walk through DIR
+## 目录遍历
 
 ```python
 import os
