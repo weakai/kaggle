@@ -48,4 +48,5 @@ data_tfidf = tfidf_transformer.transform(bow_data)  # 也是 numpy 的稀疏矩�
 ```python
 from sklearn.feature_extraction.text import TfidfVectorizer
 tfidf_transformer = TfidfVectorizer(analyzer = remove_punctuation_and_stopwords).fit(data['text'])
+data_tfidf = tfidf_transformer.transform(bow_data)
 ```

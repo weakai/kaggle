@@ -1,5 +1,16 @@
 # Numpy
 
+## np
+
+### np 函数
+
+```python
+np.shape(numpy.ndarray) -> tuple
+np.stack((test_predsf, test_predsx, test_predsy)) -> numpy.ndarray  # default: axis=0
+```
+
+### np 属性
+
 ## 线代
 
 ### 模运算

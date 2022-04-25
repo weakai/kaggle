@@ -5,7 +5,10 @@
 ### pd 函数
 
 ```python
-pd.concat([df1, df2], axis=0).reset_index()
+concat([df1, df2], axis=0).reset_index()
+read_csv(file, index_col=0)
+DataFrame({'c1': [1, 2], 'c2': [1, 2]}, index=['a', 'b'])
+reset_index(drop=True)  # 丢掉原来的 index
 ```
 
 ### pd 属性
@@ -51,6 +54,7 @@ dtypes -> numpy.dtype
 # FutureWarning -> pd.concat([df1, df2], axis=0).reset_index()
 append(df) -> DataFrame
 reset_index() -> DataFrame
+rename(columns={"v1": "label", "v2": "text"}) -> DataFrame
 ```
 
 ### DataFrame 属性
@@ -58,6 +62,7 @@ reset_index() -> DataFrame
 ```python
 columns -> Index  # 包含列名的 Index 序列
 values -> numpy.ndarray  # The same shape as df
+T -> DataFrame
 ```
 
 ## Groupby

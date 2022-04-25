@@ -85,9 +85,3 @@ numericals = ["square_feet", "year_built", "air_temperature", "cloud_coverage",
               "dew_temperature", 'precip_depth_1_hr', 'floor_count', 'beaufort_scale']
 feat_cols = categoricals + numericals
 ```
-
-重命名列
-
-```python
-data = data.rename(columns={"v1": "label", "v2": "text"})
-```

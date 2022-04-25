@@ -13,6 +13,7 @@ tqdm
 # ------ plot --------- #
 matplotlib
 seaborn
+wordcloud
 
 # ----- nlp ----------- #
 nltk

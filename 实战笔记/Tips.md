@@ -17,6 +17,17 @@ del train, train_X, val_X, lgb_train, lgb_eval, train_y, val_y, target
 gc.collect()
 ```
 
+另一种回收方式
+
+```python
+import gc
+gc.enable()
+
+...
+
+gd.collect()
+```
+
 ## Python 的类别
 
 object: 类别属性
@@ -28,3 +39,7 @@ object: 类别属性
 ## Pandas 的原位操作
 
 能用原为操作的就用原位操作省内存
+
+## Metrics and loss function
+
+Metrics: Evaluating the perfomance of a model

@@ -1,5 +1,17 @@
 # lightgbm
 
+## 简单的使用
+
+```python
+import lightgbm as lgb
+
+modely = lgb.LGBMRegressor(
+        n_estimators=125, num_leaves=90)
+modely.fit(x_train, y_trainy)
+```
+
+## 超参搜索
+
 ```python
 import lightgbm as lgb
 
