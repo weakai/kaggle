@@ -19,6 +19,12 @@ print('(rows, columns) =', stock_price_df.shape)
 stock_price_df.tail()
 ```
 
+查看各列 Null 的个数，查询缺失值
+
+```python
+df.isnull().sum()
+```
+
 numpy 数组的维度
 
 ```python

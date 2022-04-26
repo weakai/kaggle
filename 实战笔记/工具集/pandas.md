@@ -77,5 +77,11 @@ Seriesgroupby.transform() -> Series  # 聚合函数
 
 ### Groupby 属性
 
+## 索引
 
+```python
+(df.col1 > 100) & (df.col2 < 500)
+(df.col1 > 100) | (df.col2 < 500)
+~(df.col2 < 500)
+```
 

@@ -9,6 +9,7 @@ scikit-learn
 # -------- tools ------- #
 pandas
 tqdm
+tensorboard
 
 # ------ plot --------- #
 matplotlib
@@ -17,4 +18,10 @@ wordcloud
 
 # ----- nlp ----------- #
 nltk
+
+# ----- deploy -------- #
+mlflow
+
+# ----- automl -------- #
+autogluon
 

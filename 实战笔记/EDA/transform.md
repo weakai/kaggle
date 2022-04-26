@@ -29,7 +29,7 @@ data_tfidf_test_sc  = scaler.transform(data_tfidf_test)
 
 ## 编码
 
-字符串类型的 Label 编码
+### 字符串类型的 Label 编码
 
 ```python
 from sklearn.preprocessing import LabelEncoder
@@ -39,9 +39,10 @@ le = LabelEncoder()
 train["primary_use"] = le.fit_transform(train["primary_use"])
 ```
 
-Object 对象的编码
+### Object 对象的编码
 
 ```python
+# Method 1
 from sklearn.preprocessing import LabelEncoder
 
 for f in X_train.columns:
@@ -53,6 +54,7 @@ for f in X_train.columns:
 ```
 
 ```python
+# Method 1
 from sklearn.preprocessing import LabelEncoder
 
 for f in ['atom_index_0', 'atom_index_1', 'atom_1', 'type_0', 'type']:
@@ -63,7 +65,12 @@ for f in ['atom_index_0', 'atom_index_1', 'atom_1', 'type_0', 'type']:
         df_test[f] = lbl.transform(list(df_test[f].values))
 ```
 
-使用 pandas 的 get_dummies()
+```python
+# Method 3
+
+```
+
+### 使用 pandas 的 get_dummies()
 
 ```python
 def one_hot_encoder(df, nan_as_category = True):
@@ -76,7 +83,7 @@ def one_hot_encoder(df, nan_as_category = True):
     return df, new_columns
 ```
 
-标签数值化
+### 标签数值化，将字符串类别映射到整数
 
 ```python
 data['spam'] = data['label'].map( {'spam': 1, 'ham': 0} ).astype(int)
