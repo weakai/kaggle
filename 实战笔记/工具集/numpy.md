@@ -7,6 +7,8 @@
 ```python
 np.shape(numpy.ndarray) -> tuple
 np.stack((test_predsf, test_predsx, test_predsy)) -> numpy.ndarray  # default: axis=0
+np.vstack((a, b))  # 垂直拼接
+np.hstack((a, b))  # 水平拼接
 ```
 
 ### np 属性

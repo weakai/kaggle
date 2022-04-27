@@ -24,6 +24,13 @@ import warnings
 warnings.filterwarnings("ignore")
 ```
 
+TensorFlow
+
+```python
+import tensorflow as tf
+tf.get_logger().setLevel(logging.ERROR)
+```
+
 ## Timer
 
 ```python

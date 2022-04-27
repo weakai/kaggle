@@ -16,15 +16,24 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
 # set index to ID to avoid droping it later
 test  = pd.read_csv('../input/test.csv').set_index('ID')
 
+# 或者
+# 该操作在时序数据中比较常见
 train_transaction = pd.read_csv('../input/train_transaction.csv', index_col='TransactionID')
 ```
 
-标签与特征分离
+### 标签与特征分离
 
 ```python
 y_train = train['isFraud'].copy()  # 防止干扰源 df
 X_train = train.drop('isFraud', axis=1)
 X_test = test.copy()
+```
+
+另一种写法
+
+```python
+target = [column for column in df.columns if "target" in column] 
+features = df.columns.drop(target)
 ```
 
 ## ...

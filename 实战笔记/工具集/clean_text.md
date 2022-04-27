@@ -6,7 +6,6 @@ pip install clean-text
 
 ```python
 from cleantext import clean
-
 ```
 
 ## Links

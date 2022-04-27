@@ -4,12 +4,13 @@ jupyter
 # --------- core ------ #
 lightgbm
 scikit-learn
-
+tensorflow
 
 # -------- tools ------- #
 pandas
 tqdm
 tensorboard
+pandas_profiling
 
 # ------ plot --------- #
 matplotlib

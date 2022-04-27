@@ -25,6 +25,7 @@ value_counts() -> Series
 count() -> int  # 计算 Series 长度
 tolist() -> list
 replace(src_value, tgt_value, ) -> DataFrame | None  # with inplace
+sample() -> Series  # 采样
 ```
 
 ### Series 属性
@@ -39,6 +40,10 @@ dtypes -> numpy.dtype
 ## Index
 
 ### Index 函数
+
+```python
+df.columns.tolist() -> list
+```
 
 ### Index 属性
 

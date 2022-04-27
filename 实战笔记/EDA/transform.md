@@ -67,7 +67,11 @@ for f in ['atom_index_0', 'atom_index_1', 'atom_1', 'type_0', 'type']:
 
 ```python
 # Method 3
+from sklearn.preprocessing import LabelEncoder
+lb=LabelEncoder()
 
+cat = ['Sex','ChestPainType','RestingECG','ExerciseAngina','ST_Slope']
+df[cat] = df[cat].apply(lb.fit_transform)
 ```
 
 ### 使用 pandas 的 get_dummies()
@@ -98,6 +102,20 @@ target = np.log1p(train["meter_reading"])
 revt = np.expm1(target)
 ```
 
+另一种写法
+
+```python
+large_val_cols = ['Lot', 'Total interior livable area', ...]
+for c in large_val_cols + [label]:
+    train_data[c] = np.log(train_data[c] + 1)
+for c in large_val_cols:
+    test_data[c] = np.log(test_data[c] + 1)
+
+predictions = predictor.predict(...)
+pred = pd.read_csv(...)
+pred[label] = np.exp(predictions) -1
+```
+
 ## 类型转换
 
 ### 数值类型转化
@@ -109,6 +127,13 @@ train["hour"] = train["timestamp"].dt.hour
 train["weekday"] = train['weekday'].astype(np.uint8)
 train["hour"] = train['hour'].astype(np.uint8)
 train['year_built'] = train['year_built'] - 1900  # 1914.0, 2001, 2014
+```
+
+```python
+# df 的 index 的类型为 datetime
+df['dayoftheweek'] = df.index.dayofweek # Weekly Seasonality
+df['hourofday'] = df.index.hour # Daily Seasonality
+df['time'] = df.index.astype(np.int64) # Yearly Trend
 ```
 
 ## Other
