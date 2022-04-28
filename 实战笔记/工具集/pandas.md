@@ -60,6 +60,11 @@ df.columns.tolist() -> list
 append(df) -> DataFrame
 reset_index() -> DataFrame
 rename(columns={"v1": "label", "v2": "text"}) -> DataFrame
+to_numpy() -> numpy.ndarray
+
+
+drop(columns='target') -> DataFrame
+drop('target', axis=1) -> DataFrame  # 效果同上
 ```
 
 ### DataFrame 属性

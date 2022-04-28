@@ -50,3 +50,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 tfidf_transformer = TfidfVectorizer(analyzer = remove_punctuation_and_stopwords).fit(data['text'])
 data_tfidf = tfidf_transformer.transform(bow_data)
 ```
+
+```python
+TfidfVectorizer(stop_words='english', binary=True, max_features=25_000, analyzer='word')
+```
+
+

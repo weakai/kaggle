@@ -23,6 +23,14 @@ stock_price_df.tail()
 
 ```python
 df.isnull().sum()
+train.isnull().values.any()  # 检测是否存在，有一个 null 就返回 true
+```
+
+查看重复的 item
+
+```python
+train[FEATURES].duplicated().sum()
+drop_duplicates(keep='first', inplace=True)  # 原位去重
 ```
 
 numpy 数组的维度

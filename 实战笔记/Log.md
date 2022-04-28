@@ -8,7 +8,9 @@ sys.version_info
 ```python
 import logging
 
-logging.basicConfig(level=logging.WARN)
+logging.basicConfig(
+    format="%(asctime)s - %(message)s", datefmt="%d-%b-%y %H:%M:%S", level=logging.INFO
+)
 logger = logging.getLogger(__name__)
 
 try:
@@ -57,4 +59,20 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 ```python
 from IPython.display import clear_output
 clear_output()  # 运行后，后续运行的 cell 将清楚输出
+```
+
+## Pandas
+
+```python
+pd.set_option('display.max_colwidth', None)
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+pd.set_option("float_format", "{:.5f}".format)  # 小数位数显示
+```
+
+## Optuna
+
+```python
+import optuna
+optuna.logging.set_verbosity(optuna.logging.WARNING)
 ```
