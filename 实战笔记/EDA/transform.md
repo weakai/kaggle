@@ -93,6 +93,12 @@ def one_hot_encoder(df, nan_as_category = True):
 data['spam'] = data['label'].map( {'spam': 1, 'ham': 0} ).astype(int)
 ```
 
+Better Way: Encode the target to numeric
+
+```python
+data['spam'] = pd.factorize(data.label)[0]
+```
+
 ## 数据平滑
 
 ```python

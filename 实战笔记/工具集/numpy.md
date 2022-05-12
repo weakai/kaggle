@@ -5,10 +5,12 @@
 ### np 函数
 
 ```python
+np.linspace(0, 1, size) -> array
 np.shape(numpy.ndarray) -> tuple
 np.stack((test_predsf, test_predsx, test_predsy)) -> numpy.ndarray  # default: axis=0
 np.vstack((a, b))  # 垂直拼接
 np.hstack((a, b))  # 水平拼接
+np.unique(y)  # 查看 object array 有多少种
 ```
 
 ### np 属性

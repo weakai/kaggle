@@ -9,6 +9,9 @@ concat([df1, df2], axis=0).reset_index()
 read_csv(file, index_col=0)
 DataFrame({'c1': [1, 2], 'c2': [1, 2]}, index=['a', 'b'])
 reset_index(drop=True)  # 丢掉原来的 index
+factorize(y) -> (numpy.ndarray, numpy.ndarray)# (类别编码, unique(y))
+factorize(y)[0] -> numpy.ndarray # 类别编码, unique(y)
+unique(y) -> numpy.ndarray  # object
 ```
 
 ### pd 属性
